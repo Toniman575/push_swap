@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 15:12:32 by asadik            #+#    #+#             */
-/*   Updated: 2026/03/17 17:21:34 by asadik           ###   ########.fr       */
+/*   Updated: 2026/03/17 17:58:44 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	*parse_args(char **args, int *len)
 		{
 			free(numbers);
 			numbers = NULL;
-			break;
+			break ;
 		}
 		else
 			numbers[i] = current.value.n;
@@ -50,7 +50,7 @@ char	**read_args(int argc, char **argv, bool *split)
 {
 	char	**args;
 	int		i;
-	
+
 	if (argc == 2)
 	{
 		args = ft_split(argv[1], ' ');
@@ -83,7 +83,7 @@ int	*parse(int argc, char **argv, int *len)
 	split = false;
 	args = read_args(argc, argv, &split);
 	if (!args)
-		return(NULL);
+		return (NULL);
 	numbers = parse_args(args, len);
 	if (split)
 	{
@@ -112,7 +112,7 @@ static bool	find_duplicates(int *numbers, int len)
 		while (e < len)
 		{
 			if (numbers[i] == numbers[e])
-				return false;
+				return (false);
 			e++;
 		}
 		i++;
@@ -134,8 +134,8 @@ int	main(int argc, char **argv)
 	if (!numbers)
 		return (ft_printf("Error\n"), 0);
 	if (!find_duplicates(numbers, len))
-		return (ft_printf("Error\n"), 0);
+		return (free(numbers), ft_printf("Error\n"), 0);
 	for (i = 0; i < len; i++)
-			ft_printf("%d\n", numbers[i]);
+		ft_printf("%d\n", numbers[i]);
 	free(numbers);
 }
