@@ -9,6 +9,6 @@ Compile with `make`. To compile with debug flags, use `make debug`. All other st
 Run the program with `./push_swap 'list of numbers'`. You can pass one string or multiple strings containing one number each. The program will close gracefully and print "Error" followed by a newline if any invalid number is passed as an argument. This includes numbers that would overflow an integer. If no argument is passed or the passed numbers are already sorted, nothing will be printed. Otherwise, the operations needed to sort the numbers are printed, each one followed by a newline.
 
 # Resources
-[Push_Swap Tutorial](https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e).
-[Push swap visualizer](https://push-swap42-visualizer.vercel.app/).
+[Push_Swap Tutorial](https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e).<br>
+[Push swap visualizer](https://push-swap42-visualizer.vercel.app/).<br>
 [Left Shift and Right Shift Operators in C/C++](https://www.geeksforgeeks.org/cpp/left-shift-right-shift-operators-c-cpp/).

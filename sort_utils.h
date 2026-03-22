@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 12:31:11 by asadik            #+#    #+#             */
-/*   Updated: 2026/03/22 12:34:18 by asadik           ###   ########.fr       */
+/*   Updated: 2026/03/22 13:22:23 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 
 int		get_min_pos(t_list *stack, int val);
 void	init_radix(int *size, t_list **stack_a, int *max_bits, int *i);
-void	rotate_or_push(t_list **stack_a, t_list **stack_b, int i, int j);
+void	rotate_or_push(t_list **stack_a, t_list **stack_b, int i);
 
 #endif

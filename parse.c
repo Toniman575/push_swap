@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 11:36:34 by asadik            #+#    #+#             */
-/*   Updated: 2026/03/22 11:38:59 by asadik           ###   ########.fr       */
+/*   Updated: 2026/03/22 13:26:56 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,10 @@ int	*parse(int argc, char **argv, int *len)
 	return (numbers);
 }
 
-static bool	create_stack(int *current, int index, t_list **stack_a)
+static bool	create_stack(int index, t_list **stack_a)
 {
 	t_list	*new_node;
+	int		*current;
 
 	current = ft_calloc(1, sizeof(int));
 	if (!current)
@@ -118,9 +119,7 @@ bool	find_duplicates(int *numbers, int len, t_list **stack_a)
 	int	i;
 	int	j;
 	int	index;
-	int	*current;
 
-	current = NULL;
 	i = 0;
 	while (i < len)
 	{
@@ -134,7 +133,7 @@ bool	find_duplicates(int *numbers, int len, t_list **stack_a)
 				index++;
 			j++;
 		}
-		if (!create_stack(current, index, stack_a))
+		if (!create_stack(index, stack_a))
 			return (false);
 		i++;
 	}

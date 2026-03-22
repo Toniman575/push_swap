@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 15:12:32 by asadik            #+#    #+#             */
-/*   Updated: 2026/03/22 12:33:27 by asadik           ###   ########.fr       */
+/*   Updated: 2026/03/22 13:28:59 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 #include <stdbool.h>
 #include <limits.h>
 
-#include "libft/ft_printf/ft_printf.h"
-#include "libft/ft_printf/ft_printf_util.h"
 #include "libft/libft.h"
 #include "parse.h"
 #include "sort.h"
 
-bool	is_sorted(t_list *stack_a)
+static bool	is_sorted(t_list *stack_a)
 {
 	while (stack_a->next)
 	{
@@ -45,10 +43,10 @@ int	main(int argc, char **argv)
 		return (0);
 	numbers = parse(argc, argv, &len);
 	if (!numbers)
-		return (ft_printf("Error\n"), 0);
+		return (ft_putstr_fd("Error\n", 2), 0);
 	if (!find_duplicates(numbers, len, &stack_a))
 		return (ft_lstclear(&stack_a, free), free(numbers),
-			ft_printf("Error\n"), 0);
+			ft_putstr_fd("Error\n", 2), 0);
 	if (len <= 1 || is_sorted(stack_a))
 		return (free(numbers), ft_lstclear(&stack_a, free), 0);
 	if (len <= 5)
