@@ -6,13 +6,12 @@
 /*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 15:12:32 by asadik            #+#    #+#             */
-/*   Updated: 2026/03/22 13:28:59 by asadik           ###   ########.fr       */
+/*   Updated: 2026/03/22 13:41:01 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdbool.h>
-#include <limits.h>
 
 #include "libft/libft.h"
 #include "parse.h"
@@ -26,7 +25,7 @@ static bool	is_sorted(t_list *stack_a)
 			return (false);
 		stack_a = stack_a->next;
 	}
-	return (1);
+	return (true);
 }
 
 int	main(int argc, char **argv)
