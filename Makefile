@@ -5,7 +5,7 @@ LIBFT =		$(LIBFT_DIR)/libft.a
 CC =		cc
 CFLAGS =	-Wall -Wextra -Werror -MMD -MP -I$(LIBFT_DIR)
 LDFLAGS =	-L$(LIBFT_DIR) -lft
-SRCS =		push_swap.c
+SRCS =		push_swap.c parse.c operations.c sort.c sort_utils.c
 OBJS =		$(SRCS:.c=.o)
 DEPS =		$(OBJS:.o=.d)
 
