@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 12:29:30 by asadik            #+#    #+#             */
-/*   Updated: 2026/03/22 12:33:57 by asadik           ###   ########.fr       */
+/*   Updated: 2026/03/22 12:59:09 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 				rotate_or_push(stack_a, stack_b, i, j);
 			else
 				break ;
+			j++;
 		}
 		while (*stack_b)
 			push(stack_b, stack_a, "pa");
