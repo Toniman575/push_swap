@@ -1,7 +1,7 @@
 _This project has been created as part of the 42 curriculum by asadik._
 
 # Description
-Sorts a list of integers using limited operations and two stacks.
+Sorts a list of integers using limited operations and two stacks using radix and a simple simple comparative sort algorithm for fewer numbers.
 
 # Instructions
 Compile with `make`. To compile with debug flags, use `make debug`. All other standard make rules apply.
